@@ -1,0 +1,221 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #23312e; /* เขียวเข้มลึกลับ */
+    color: #e8e6d1; /* ขาวเหลืองโทนเวทมนตร์ */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #1b2a27, #16221f); /* Gradient background for a richer look */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #c1a57b; /* Light brown border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+header h1 {
+    color: #000000; /* Light wheat color for better contrast */
+    font-size: 3.5em; /* Slightly larger font size for emphasis */
+    font-family: 'Garamond', serif; /* Elegant font for a classic feel */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5), 0 0 10px #ffdd33; /* Enhanced shadow effect */
+    animation: glow 2s infinite alternate;
+    margin: 0; /* Remove default margin */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 3px 3px 10px #fff, 0 0 20px #ffffff, 0 0 30px #6a5bb7;
+    }
+    100% {
+        text-shadow: 3px 3px 20px #fff, 0 0 40px #d6ebff, 0 0 50px #ffdd33;
+    }
+}
+
+
+.image-wrapper img {
+    width: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px; 
+}
+
+nav {
+    text-align: center;
+    margin: 20px;
+    background: linear-gradient(to right, #23312e, #1b2a27);
+    padding: 10px 0;
+}
+
+nav a {
+    color: #bda784;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.3em;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #bda784;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #ffdd33, 0 0 20px #ffdd33;
+}
+
+.content {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.content h2 {
+    color: #d9d2b6;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.content p {
+    color: #e8e6d1;
+    font-size: 1.2em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content img {
+    border: 5px solid #c1a57b; /* กรอบรูปสีสีน้ำตาลอ่อน */
+    border-radius: 10px; /* มุมกรอบรูปโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงาของกรอบรูป */
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.content .caption {
+    font-size: 1.1em;
+    color: #f4f4f4; /* สีขาวนวล */
+    margin-top: 10px;
+    text-align: center;
+}
+
+.synopsis-content {
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.character {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.character:hover {
+    transform: translateY(-10px);
+}
+
+.character img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.character-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #19311b;
+    margin: 10px 0;
+}
+
+.character-desc {
+    font-size: 13px;
+    color: #666;
+    text-align: justify;
+}
+.about-container {
+    display: flex;
+    align-items: flex-start; /* จัดตำแหน่งให้อยู่ด้านบน */
+    gap: 100px; /* ลดระยะห่างระหว่างรูปและข้อมูลเป็น 10px */
+    flex-wrap: wrap; /* ให้ยืดหยุ่นเมื่อหน้าจอเล็ก */
+    justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+    padding: 40px;
+}
+
+.profile-photo {
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.personal-info {
+    text-align: left;
+    color: #e8e6d1;
+    font-size: 1.2em;
+    max-width: 600px; /* จำกัดความกว้างของข้อมูลส่วนตัว */
+    margin-left: 10px; /* เพิ่มระยะห่างเล็กน้อยระหว่างรูปภาพและข้อความ */
+}
+.references {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #18221a;
+    border-top: 2px solid #bda784;
+}
+
+.references h3 {
+    margin-top: 0;
+}
+
+.references ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.references li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #1b2a27;
+    text-align: center;
+    padding: 10px;
+    color: #bda784;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #c1a57b; /* เส้นขอบด้านบน */
+}
+
